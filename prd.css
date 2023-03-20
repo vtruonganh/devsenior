@@ -1,0 +1,114 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  text-transform: capitalize;
+  text-decoration: none;
+}
+body {
+  min-height: 100vh;
+  background: url(https://img.freepik.com/free-photo/abstract-empty-smooth-light-pink-studio-room-background-use-as-montage-product-display-banner-template_1258-71406.jpg?w=1060&t=st=1679287247~exp=1679287847~hmac=11e2af7847cf6165b9c974aae53a85d813212286bc2b1102989269043fe71061);
+  background-size: cover;
+  background-position: center;
+}
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: #ffffff;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  padding: 1px 7%;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 1000;
+  display: flex;
+}
+header .logo {
+  font-weight: bolder;
+  font-size: 25px;
+  color: #333;
+  width: 250px;
+}
+header .navbar ul {
+  list-style: none;
+}
+header .navbar ul li {
+  position: relative;
+  float: left;
+}
+header .navbar ul li a {
+  font-size: 20px;
+  padding: 20px;
+  color: #333;
+  display: block;
+  text-decoration: none;
+}
+header .navbar ul li a:hover {
+  background: #333;
+  color: #ffffff;
+}
+header .navbar ul li ul {
+  position: absolute;
+  left: 0;
+  width: 200px;
+  background: #ffffff;
+  display: none;
+}
+header .navbar ul li ul li {
+  width: 100%;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+header .navbar ul li ul li ul {
+  left: 200px;
+  top: 0;
+}
+header .navbar ul li:focus-within > ul,
+header .navbar ul li:hover > ul {
+  display: initial;
+}
+#menu-bar {
+  display: none;
+}
+header label {
+  color: #333;
+  font-size: 20px;
+  cursor: pointer;
+  display: none;
+}
+
+@media (max-width: 991px) {
+  header {
+    padding: 20px;
+  }
+  header label {
+    display: initial;
+  }
+  header .navbar {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    background: #ffffff;
+    border-top: rgba(0, 0, 0, 0.1);
+    display: none;
+  }
+  header .navbar ul li {
+    width: 100%;
+  }
+  header .navbar ul li ul {
+    position: relative;
+    width: 100%;
+  }
+  header .navbar ul li ul li {
+    background: #eee;
+  }
+  header .navbar ul li ul li ul {
+    width: 100%;
+    left: 0;
+  }
+  #menu-bar:checked ~ .navbar {
+    display: initial;
+  }
+}
